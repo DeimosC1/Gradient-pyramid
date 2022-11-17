@@ -1,0 +1,29 @@
+$primary: #ffc200;
+$secondary:#27ae60;
+$color3: #a05625;
+$max:50;
+body {
+  background-color: $secondary;
+  margin:0;
+  width: 100%;
+  height: 100%;
+}
+.flextape{
+  width: 30px;
+  height: 10px;
+}
+
+html{
+  width: 100%;
+  height: 100%;
+}
+@for $i from 1 through $max{
+  .flextape:nth-child(#{$i}){
+    width:#{$i*20}px;
+    height: 20px;
+    margin: auto;
+    background-color: darken($primary,$i);
+
+
+}
+}
